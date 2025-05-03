@@ -93,6 +93,22 @@ a {
     border: 3px solid #D5C7BC;
 }
 
+.reserver {
+    border-radius: 30px;
+    font-family: "Lexend Exa", sans-serif;
+    border: 3px solid white;
+    transition: all 0, 2s;
+    margin-left: auto;
+    display: block;
+
+}
+
+.reserver:hover {
+    border: 3px solid #D5C7BC;
+}
+
+
+
 
 #bienvenue {
     background-image: url("../images/cappadoce.jpg");
@@ -110,7 +126,9 @@ a {
     font-family: "Roboto", Arial, sans-serif;
 }
 
-#top {
+#top,
+#top-istanbul,
+#top-bodrum {
     font-size: 19px;
     text-align: center;
     margin-bottom: 40px;
@@ -146,6 +164,20 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+#istanbul-info {
+    background-image: url("https://www.mifuguemiraison.com/wp-content/uploads/2024/05/istanbul-coucher-soleil-900x600.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+#bodrum-info {
+    background-image: url("https://discoverd1.gr/sites/default/files/inline-images/2668b83b-023c-4d9f-8447-678bc8e8407e.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 
 /* LE RESPONSIVE DESIGN */
@@ -191,7 +223,7 @@ a {
         grid-column: auto;
     }
 
-    #flexbox-foot{
+    #flexbox-foot {
         flex-direction: column;
     }
 
@@ -203,13 +235,16 @@ a {
 
 
 
+
+
 }
 
 /*480 smartphone */
 @media all and (max-width:570px) {
-    .conteneur{
+    .conteneur {
         width: 100%;
     }
+
     #bienvenue {
         padding: 15px;
     }
