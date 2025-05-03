@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+nav a,
+nav li {
+    color: red;
+}
+
+h1 {
+    font-size: 40px;
+    font-family: "Noto Sans", cursive;
+    margin: 40px 0 10px;
+    text-align: center;
+}
+
+h2 {
+    margin: 0.83em 0 0 0;
+}
+
+
+body {
+    font-family: "Roboto", serif;
+    margin: 0;
+}
+
+ul {
+    /* haut = bas et droite = gauche */
+    margin: 5px 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+}
+
+header {
+    font-size: 60px;
+    font-family: "Pacifico", cursive;
+    color: white;
+    text-shadow: 0 0 30px black;
+}
+
+footer {
+    /*background-color: #D4D3DC; 
+    background-image: url("https://img.freepik.com/free-vector/sky-graphics-pattern_23-2147495646.jpg?t=st=1746225523~exp=1746229123~hmac=2687d65ccb482b3c7c51d938fbd73ea7ca5334f4380889ba572d8f49f3abfa90&w=740");
+    background-size: 150px;
+    padding: 15px;*/
+    font-size: 14px;
+    background: left/100px url("https://t4.ftcdn.net/jpg/02/05/01/41/360_F_205014194_jXn6FXUBQo2iukZXBHECAK3RwEuM83Fh.jpg"), #D4D3DC;
+    margin-top: 40px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.contenu {
+    padding: 10px;
+}
+
+.conteneur {
+    width: 1300px;
+    margin: 0 auto;
+}
+
+.ville {
+    font-family: "Lexend Exa", sans-serif;
+    font-weight: 900;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    border: 3px solid white;
+    transition: all 0.2s;
+    border-radius: 30px;
+    font-size: 40px;
+    color: white;
+    text-shadow: 0 0 50px black;
+    display: flex;
+    justify-content: center;
+    /* aligne le nom des villes au centre sur l'axe x (la largeur) */
+    align-items: center;
+    /* aligne le nom des villes sur au centre sur l'axe y (la hauteur) */
+}
+
+.ville:hover {
+    border: 3px solid #D5C7BC;
+}
+
+
+#bienvenue {
+    background-image: url("../images/cappadoce.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    /*justify-content:left;*/
+    align-items: center;
+}
+
+#slogan {
+    display: block;
+    font-size: 30px;
+    font-family: "Roboto", Arial, sans-serif;
+}
+
+#top {
+    font-size: 19px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#istanbul {
+    background-image: url("https://content.r9cdn.net/rimg/dimg/d2/71/8a9758f3-city-3430-163cc469939.jpg?width=1366&height=768&xhint=1842&yhint=996&crop=true");
+    grid-row: 1/3;
+
+}
+
+#bodrum {
+    background-image: url("https://bynder.onthebeach.co.uk/cdn-cgi/image/width=1400,quality=70,fit=cover,format=auto/m/628081f261d951c7/original/Riva-Bodrum-Resort-Adult-Only.jpg");
+    grid-column: 2/4;
+}
+
+#cappadoce {
+    background-image: url("https://static.independent.co.uk/2023/08/31/12/iStock-1484200613.jpg");
+}
+
+#afyon {
+    background-image: url("https://content.r9cdn.net/rimg/dimg/ef/34/4981f3a1-city-51658-172ca508f3f.jpg?width=1366&height=768&xhint=2804&yhint=1799&crop=true");
+}
+
+#flexbox-ville {
+    /*display: flex;*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+#flexbox-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* LE RESPONSIVE DESIGN */
+
+
+
+
+/*1300 notebook */
+@media all and (max-width:1350px) {
+    .conteneur {
+        width: 800px;
+    }
+
+    #flexbox-ville {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #bodrum {
+        grid-column: auto;
+    }
+
+    #afyon {
+        grid-column: 1/3;
+    }
+
+}
+
+/*768 tablette */
+@media all and (max-width:800px) {
+    .conteneur {
+        width: 500px;
+    }
+
+    #flexbox-ville {
+        grid-template-columns: 1fr;
+    }
+
+    #istanbul {
+        grid-row: auto;
+    }
+
+    #afyon {
+        grid-column: auto;
+    }
+
+    #flexbox-foot{
+        flex-direction: column;
+    }
+
+    #logo-foot {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+
+}
+
+/*480 smartphone */
+@media all and (max-width:570px) {
+    .conteneur{
+        width: 100%;
+    }
+    #bienvenue {
+        padding: 15px;
+    }
+}
